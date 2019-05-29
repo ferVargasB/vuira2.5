@@ -1,6 +1,7 @@
 $(document).ready(function(){
+    //var loader = document.getElementById("loader");
     $("#login-form").on("submit", function(e){
-        console.log("READY!");
+        //loader.removeAttribute("hidden");
         e.preventDefault();
         var datos = $(this).serializeArray();
         $.ajax({
@@ -20,7 +21,7 @@ $(document).ready(function(){
                       )
                     setTimeout(function() {
                         window.location.replace(resultado.pantalla);
-                    },2000);
+                    },500);
                 }
                 else
                 {

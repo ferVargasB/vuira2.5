@@ -80,6 +80,7 @@ body {
       </head>
       <body class="text-center">
     <form class="form-signin" id="login-form" method="POST" action="<?php echo base_url().'index.php/Login/validar_login/';?>">
+  <img src="<?php echo base_url().'login_assets/loader.gif';?>" alt="" id="loader" hidden style="position:absolute;top:50%;">
   <img class="mb-4" src="<?php echo base_url()."login_assets/GALogo.png";?>" alt="" width="130" height="100">
   <h1 class="h3 mb-3 font-weight-normal"></h1>
   <label for="inputEmail" class="sr-only">Usuario</label>
