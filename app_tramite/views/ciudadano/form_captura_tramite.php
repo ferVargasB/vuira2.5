@@ -49,6 +49,56 @@ echo validation_errors();
             </h3>
             <input type="submit" id="submit_button" form="main_form" class="btn btn-success float" name="submit" value="Guardar Trámite">
               <form id="main_form" method="POST" action="<?php echo base_url().'app_tramite.php/Tramite/guardar/';?>" enctype="multipart/form-data">
+              <div id="panel-datos-generales" class="content-box border-top border-blue">
+                  <div class="content-box-wrapper">
+                    <h3 class="title-hero">II. DATOS DEL SOLICITANTE</h3>
+                    <div class="bordered-row">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label>Nombre del Propietario</label>
+                            <input type="text" class="form-control" name="nombre_propietario">
+                          </div>
+                          <div class="form-group">
+                            <label>Teléfono</label>
+                            <input type="tel" class="form-control" name="telefono" >
+                          </div>
+                          <div class="form-group">
+                            <label>Correo Eléctronico</label>
+                            <input type="email" class="form-control" name="correo">
+                          </div>
+                          <div class="form-group">
+                            <label>Tipo de Trámite</label>
+                            <select class="chosen-select"  data-placeholder="Seleccione una Opción" name="tipo_tramite" value="Seleccione tipo de trámite">
+                              <option value="1">Asignación de Clave Catastral</option>
+                              <option value="2">Modificación de Clave Catastral</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- DIV content-box-wrapper de CUENTAS SUSPENDIDAS-->
+                </div> <!-- DIV PANEL-CUENTA-SUSPENDIDA 1-->
+
+
+                <div id="panel-mensajes" class="content-box border-top border-blue">
+                  <div class="content-box-wrapper">
+                    <h3 class="title-hero">III. DATOS ADICIONALES</h3>
+                    <div class="bordered-row">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label>Escriba información adicional para el funcionario</label>
+                            <textarea rows="4" type="text" class="form-control"  name="informacion_adicional" style="resize:none;" value="">
+                            </textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- DIV content-box-wrapper de CUENTAS SUSPENDIDAS-->
+                </div> <!-- DIV PANEL-MENSAJES-->
+                
+                
                 <div id="panel-fecha_recep" class="content-box border-top border-blue">
                   <div id="content-wrapper-fecha-recep" class="content-box-wrapper">
                     <h3 class="title-hero">I. Documentos del Inmueble</h3>
@@ -108,72 +158,15 @@ echo validation_errors();
                     </div>
                   </div>
                 <div class="row">
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="">Escritura Pública de Propiedad que contenga la Hoja Registral y ampare la Superficie Registrada (en caso de no contener la hoja registral anexar copia de Libertad de Gravamen)</label>
-                        <input accept=".jpg, .jpeg, .png ,.pdf, .rar, .zip" type="file" name="Doc_Escritura_Publica" multiple="">
-                      </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="">Escritura Pública de Propiedad que contenga la Hoja Registral y ampare la Superficie Registrada (en caso de no contener la hoja registral anexar copia de Libertad de Gravamen)</label>
+                      <input accept=".jpg, .jpeg, .png ,.pdf, .rar, .zip" type="file" name="Doc_Escritura_Publica" multiple="">
                     </div>
                   </div>
-                <div class="row">
-                    <!-- <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="">Poder Notarial para Representación de Persona Moral</label>
-                        <input accept=".jpg, .jpeg, .png ,.pdf, .rar, .zip" type="file" name="Doc_Poder_Moral" multiple="">
-                      </div>
-                    </div> -->
-                  </div>
-              </div>
                 </div>
-
-
-                <div id="panel-datos-generales" class="content-box border-top border-blue">
-                  <div class="content-box-wrapper">
-                    <h3 class="title-hero">II. DATOS DEL SOLICITANTE</h3>
-                    <div class="bordered-row">
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <label>Nombre del Propietario</label>
-                            <input type="text" class="form-control" name="nombre_propietario">
-                          </div>
-                          <div class="form-group">
-                            <label>Teléfono</label>
-                            <input type="tel" class="form-control" name="telefono" >
-                          </div>
-                          <div class="form-group">
-                            <label>Correo Eléctronico</label>
-                            <input type="email" class="form-control" name="correo">
-                          </div>
-                          <div class="form-group">
-                            <label>Tipo de Trámite</label>
-                            <select class="chosen-select"  data-placeholder="Seleccione una Opción" name="tipo_tramite" value="Seleccione tipo de trámite">
-                              <option value="1">Asignación de Clave Catastral</option>
-                              <option value="2">Modificación de Clave Catastral</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div><!-- DIV content-box-wrapper de CUENTAS SUSPENDIDAS-->
-                </div> <!-- DIV PANEL-CUENTA-SUSPENDIDA 1-->
-
-                <div id="panel-mensajes" class="content-box border-top border-blue">
-                  <div class="content-box-wrapper">
-                    <h3 class="title-hero">III. DATOS ADICIONALES</h3>
-                    <div class="bordered-row">
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <label>Escriba información adicional para el funcionario</label>
-                            <textarea rows="4" type="text" class="form-control"  name="informacion_adicional" style="resize:none;" value="">
-                            </textarea>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div><!-- DIV content-box-wrapper de CUENTAS SUSPENDIDAS-->
-                </div> <!-- DIV PANEL-MENSAJES-->
+              </div>
+            </div>
               </form>
             </div>
           </div>

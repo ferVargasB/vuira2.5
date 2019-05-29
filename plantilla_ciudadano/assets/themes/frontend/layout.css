@@ -51,12 +51,12 @@
 .main-header .header-logo {
     float: left;
     margin: 19px 0 18px;
-    background: url('../../image-resources/logo.png') left 50% no-repeat;
+    background: url('../../image-resources/GALogo.png') left 50% no-repeat;
     width: 75px;
     height: 75px;
 }
 .main-header.font-inverse .header-logo {
-    background: url('../../image-resources/logo-alt.png') left 50% no-repeat;
+    background: url('../../image-resources/GALogo.png') left 50% no-repeat;
 }
 .main-header .header-logo span {
     opacity: 0.7;
